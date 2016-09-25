@@ -25,6 +25,7 @@ end
 
 # app/assets/javascripts/application.js
 /*
+ *= require jquery
  *= require input-case-enforcer
 */
 ```
@@ -36,7 +37,7 @@ $('input').caseEnforcer('uppercase');
 $('input').caseEnforcer('lowercase');
 
 // capitalize the first letter of every word
-$('input').caseEnforcer('capitalize');
+$('textarea').caseEnforcer('capitalize');
 
 // Remove case enforcer from an input
 $('input').caseEnforcer('destroy');
