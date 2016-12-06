@@ -5,7 +5,7 @@
 
 # Install
 
-#### Yarm, NPM, or Bower
+#### Yarn, NPM, or Bower
 ```
 yarn add chosen-material-theme
 
