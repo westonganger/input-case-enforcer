@@ -5,17 +5,15 @@
 
 # Install
 
-##### Bower
 ```
+yarn add input-case-enforcer
+# OR
+npm install input-case-enforcer
+# OR
 bower install input-case-enforcer
 ```
 
-##### NPM
-```
-npm install input-case-enforcer
-```
-
-#### Rails
+#### Rails Install
 ```ruby
 # Gemfile
 source 'https://rails-assets.org' do
