@@ -5,12 +5,13 @@
 
 # Install
 
+#### Yarm, NPM, or Bower
 ```
-yarn add input-case-enforcer
-# OR
-npm install input-case-enforcer
-# OR
-bower install input-case-enforcer
+yarn add chosen-material-theme
+
+npm install chosen-material-theme
+
+bower install chosen-material-theme
 ```
 
 #### Rails Install
