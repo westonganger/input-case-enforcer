@@ -7,11 +7,11 @@
 
 #### Yarn, NPM, or Bower
 ```
-yarn add chosen-material-theme
+yarn add input-case-enforcer
 
-npm install chosen-material-theme
+npm install input-case-enforcer
 
-bower install chosen-material-theme
+bower install input-case-enforcer
 ```
 
 #### Rails Install
