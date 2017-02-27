@@ -1,7 +1,7 @@
 {
   "name": "input-case-enforcer",
-  "version": "0.9.0",
-  "description": "jQuery plugin to enforce uppercase, lowercase, or Capitalized inputs & textareas",
+  "version": "1.0.0",
+  "description": "Enforce uppercase, lowercase, or capitalized inputs & textareas",
   "main": "dist/input-case-enforcer.min.js",
   "directories": {
     "test": "test"
@@ -17,6 +17,7 @@
     "lowercase",
     "input",
     "jquery",
+    "zepto",
     "js"
   ],
   "author": "Weston Ganger",
@@ -26,7 +27,6 @@
   },
   "homepage": "https://github.com/westonganger/input-case-enforcer",
   "dependencies": {
-    "jquery": ">=1.0"
   },
   "devDependencies": {
     "gulp": "*",

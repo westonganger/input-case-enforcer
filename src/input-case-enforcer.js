@@ -1,8 +1,8 @@
 /*
- * input-case-enforcer - jQuery plugin to enforce uppercase, lowercase, or Capitalized inputs & textareas
- * @version v0.9.0
+ * input-case-enforcer - Enforce uppercase, lowercase, or capitalized inputs & textareas
+ * @version v1.0.0
  * @link http://github.com/westonganger/input-case-enforcer
- * @license GNU GPL
+ * @license MIT
  */
 
 (function($){
@@ -50,6 +50,7 @@
 
       updateCase(); //init on page load
     });
+
     return this;
-  }
-}(jQuery));
+  };
+}(window.jQuery || window.Zepto || window.$));

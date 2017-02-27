@@ -8,7 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+
+    <style>
+      body{
+        padding: 20px 40px;
+      }
+    </style>
   </head>
+
   <body>
     <h1>Testing input-case-enforcer</h1>
 
@@ -28,8 +35,12 @@
       <input id="input4" type='text'/>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    -->
     <script src="src/input-case-enforcer.js"></script>
+
     <script type="text/javascript">
       $('#input1').caseEnforcer('uppercase');
 
