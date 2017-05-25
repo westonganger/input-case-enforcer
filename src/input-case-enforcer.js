@@ -9,9 +9,8 @@
   var event = 'blur';
 
   $.fn.caseEnforcer = function(arg){
-    if(['destroy','uppercase','lowercase','capitalize'].indexOf(arg) === -1){
-      console.log("input-case ArgumentError: Incorrect argument. Allowed values are 'uppercase','lowercase','capitalize', or 'destroy'");
-      return false;
+    if(!arg || ['uppercase','lowercase','capitalize','destroy'].indexOf(arg) === -1){
+      throw("Error: Allowed values for caseEnforcer function are 'uppercase','lowercase','capitalize', or 'destroy'");
     }
 
     if(arg === 'destroy' || $(this).data('input-case')){
@@ -37,15 +36,14 @@
           input.val(input.val().toLowerCase());
         }else if(mode === 'capitalize'){
           input.val(
-            input.val().replace(/(^|\s)[a-z]/g,function(f){
+            input.val().replace(/(^|\s)[a-z]/g, function(f){
               return f.toUpperCase();
             })
           );
         }
       };
 
-      input.css('text-transform', arg);
-      input.data("input-case", arg);
+      input.css('text-transform', arg).data("input-case", arg).addClass('input-case-enforcer');
       input.off(event + '.input-case').on(event+'.input-case', updateCase);
 
       updateCase(); //init on page load

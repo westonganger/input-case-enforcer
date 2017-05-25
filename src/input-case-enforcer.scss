@@ -1,0 +1,10 @@
+.input-case-enforcer{
+  &:-ms-input-placeholder{
+    text-transform: none; 
+    text-transform: initial;
+  }
+
+  &::placeholder{
+    text-transform: initial;
+  } 
+}

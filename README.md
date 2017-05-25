@@ -5,6 +5,10 @@
 
 Requires a DOM library such as jQuery, Zepto, or any that supports extending $.fn
 
+# Demo
+
+https://jsfiddle.net/t4gdquqs/1/
+
 # Install
 
 #### Yarn, NPM, or Bower
@@ -14,17 +18,23 @@ yarn add input-case-enforcer
 npm install input-case-enforcer
 
 bower install input-case-enforcer
+
+<!-- Then include the dist files in your HTML -->
+<link rel="stylesheet" type="text/css" href="input-case-enforcer/dist/input-case-enforcer.min.css" />
+<style type="text/javascript" src="input-case-enforcer/dist/input-case-enforcer.min.js"></script>
 ```
 
-#### Rails Install
+#### Rails
 ```ruby
 # Gemfile
 source 'https://rails-assets.org' do
   gem 'rails-assets-input-case-enforcer'
 end
 
-
 # app/assets/javascripts/application.js
+//= require input-case-enforcer
+
+# app/assets/javascripts/application.scss
 /*
  *= require input-case-enforcer
 */
@@ -44,4 +54,4 @@ $('input').caseEnforcer('destroy');
 ```
 
 # Credits
-Created by Weston Ganger - @westonganger
+Created by [Weston Ganger](https://github.com/westonganger)

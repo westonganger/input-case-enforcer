@@ -8,48 +8,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    -->
 
     <style>
       body{
         padding: 20px 40px;
       }
+      div{
+        margin: 20px;
+      }
+      input, textarea{
+        width: 400px;
+      }
     </style>
+
+    <link rel="stylesheet" href="dist/input-case-enforcer.min.css">
+    <script src="dist/input-case-enforcer.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $('#input1').caseEnforcer('uppercase');
+
+        $('#input2').caseEnforcer('lowercase');
+
+        $('#input3').caseEnforcer('capitalize');
+
+        $('#input4').caseEnforcer('uppercase').caseEnforcer('destroy');
+      });
+    </script>
   </head>
 
   <body>
     <h1>Testing input-case-enforcer</h1>
 
-    <div style="width: 500px; margin: 20px;">
-      <input id="input1" type='text'/>
+    <div>
+      <input id="input1" type='text' placeholder="Uppercase input" />
     </div>
 
-    <div style="width: 500px; margin: 20px;">
-      <input id="input2" type='text'/>
+    <div>
+      <input id="input2" type='text' placeholder="Lowercase input" />
     </div>
 
-    <div style="width: 500px; margin: 20px;">
-      <textarea id="input3"></textarea>
+    <div>
+      <textarea id="input3" placeholder="Capitalized textarea"></textarea>
     </div>
 
-    <div style="width: 500px; margin: 20px;">
-      <input id="input4" type='text'/>
+    <div>
+      <input id="input4" type='text' placeholder="Uppercase was Removed" />
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
-    -->
-    <script src="src/input-case-enforcer.js"></script>
-
-    <script type="text/javascript">
-      $('#input1').caseEnforcer('uppercase');
-
-      $('#input2').caseEnforcer('lowercase');
-
-      $('#input3').caseEnforcer('capitalize');
-
-      $('#input4').caseEnforcer('uppercase');
-      $('#input4').caseEnforcer('destroy');
-    </script>
   </body>
 </html>

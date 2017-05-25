@@ -32,6 +32,8 @@
     "gulp": "*",
     "gulp-uglify": "*",
     "gulp-rename": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-sass": "*",
     "pump": "*",
     "del": "*"
   }
