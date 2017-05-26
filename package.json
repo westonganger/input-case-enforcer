@@ -2,10 +2,7 @@
   "name": "input-case-enforcer",
   "version": "1.0.1",
   "description": "Enforce uppercase, lowercase, or capitalized inputs & textareas",
-  "main": [
-    "dist/input-case-enforcer.min.js",
-    "dist/input-case-enforcer.min.css"
-  ],
+  "main": "dist/input-case-enforcer.min.js",
   "directories": {
     "test": "test"
   },
