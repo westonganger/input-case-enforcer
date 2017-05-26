@@ -1,1 +1,2 @@
-.input-case-enforcer:-ms-input-placeholder{text-transform:none;text-transform:initial}.input-case-enforcer::-webkit-input-placeholder{text-transform:initial}.input-case-enforcer::-moz-placeholder{text-transform:initial}.input-case-enforcer::placeholder{text-transform:initial}
+/*! input-case-enforcer v1.0.1 - http://github.com/westonganger/input-case-enforcer 
+*/.input-case-enforcer:-ms-input-placeholder{text-transform:none;text-transform:initial}.input-case-enforcer::-webkit-input-placeholder{text-transform:initial}.input-case-enforcer::-moz-placeholder{text-transform:initial}.input-case-enforcer::placeholder{text-transform:initial}

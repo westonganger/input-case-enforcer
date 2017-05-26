@@ -1,9 +1,4 @@
-/*
- * input-case-enforcer - Enforce uppercase, lowercase, or capitalized inputs & textareas
- * @version v1.0.0
- * @link http://github.com/westonganger/input-case-enforcer
- * @license MIT
- */
+/* input-case-enforcer v1.0.1 - http://github.com/westonganger/input-case-enforcer */
 
 (function($){
   var event = 'blur';

@@ -1,6 +1,6 @@
 {
   "name": "input-case-enforcer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enforce uppercase, lowercase, or capitalized inputs & textareas",
   "main": "dist/input-case-enforcer.min.js",
   "directories": {
@@ -21,7 +21,7 @@
     "js"
   ],
   "author": "Weston Ganger",
-  "license": "GNU GPL",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/westonganger/input-case-enforcer/issues"
   },
