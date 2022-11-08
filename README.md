@@ -1,11 +1,11 @@
 # input-case-enforcer
 <a href="https://badge.fury.io/js/input-case-enforcer" target="_blank"><img height="21" style='border:0px;height:21px;' border='0' src="https://badge.fury.io/js/input-case-enforcer.svg" alt="NPM Version"></a>
 <a href='https://www.npmjs.org/package/input-case-enforcer' target='_blank'><img height='21' style='border:0px;height:21px;' src='https://img.shields.io/npm/dt/input-case-enforcer.svg?label=NPM+Downloads' border='0' alt='NPM Downloads' /></a>
-<a href='https://ko-fi.com/A5071NK' target='_blank'><img height='22' style='border:0px;height:22px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 
+<a href='https://ko-fi.com/A5071NK' target='_blank'><img height='22' style='border:0px;height:22px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a>
 
 `input-case-enforcer` is a plugin for enforcing uppercase, lowercase, or Capitalized inputs & textareas.
 
-Requires a DOM library such as jQuery, Zepto, or any that supports extending $.fn
+Requires a DOM library such as jQuery, Zepto, or any that supports extending $.fn. There is also a vanilla JS version which requires no libraries as well although it's experimental in terms of the 'destroy' method.
 
 # Demo
 
@@ -53,6 +53,12 @@ $('textarea').caseEnforcer('capitalize');
 
 // Remove case enforcer from an input
 $('input').caseEnforcer('destroy');
+```
+
+# Alternative Vanilla JS Version
+```javascript
+  // Add input with query for a querySelector call, and type being the same as previous with jquery
+  window.inputCaseEnforcer.init('#input-with-id', 'lowercase');
 ```
 
 # Credits
