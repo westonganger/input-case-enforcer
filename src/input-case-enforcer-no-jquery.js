@@ -3,40 +3,53 @@
 window.inputCaseEnforcer = { // Alternative object version of the inputCaseEnforcer in vanilla Js
 
   element: null,
+  typeArgument: '',
+  optionalDestroy: '',
 
   q: function(incoming) { return document.querySelector(incoming); },
 
   init: function(incomingElement, incomingType, optionalDestroy = null) {
     this.element = this.q(incomingElement);
+    this.typeArgument = incomingType;
+    this.optionalDestroy = optionalDestroy;
     this.enforcementDriver(incomingType, optionalDestroy);
   },
 
-  enforcementDriver: function(typeArgument, optionalDestroy){ // An equivalent version of caseEnforcer
+  enforcementDriver: function(){ // An equivalent version of caseEnforcer
 
-    if(!typeArgument || ['uppercase','lowercase','capitalize','destroy'].indexOf(typeArgument) === -1){
+    if(!this.typeArgument || ['uppercase','lowercase','capitalize','destroy'].indexOf(this.typeArgument) === -1){
       throw("Error: Allowed values for caseEnforcer function are 'uppercase','lowercase','capitalize', or 'destroy'");
     }
 
-    if(optionalDestroy === 'destroy' || typeof(this.element.getAttribute('data-input-case') != undefined)){
-      this.element.classList.remove('input-case');
+    let checkThisAttribute = this.element.getAttribute('data-input-case');
 
-      if(optionalDestroy === 'destroy'){
-        this.element.style.textTransform = "none";
+    if(this.optionalDestroy === 'destroy' || typeof(checkThisAttribute != undefined)){
+      if(this.optionalDestroy === 'destroy'){
+        this.element.style.textTransform = 'none';
         return this;
+      } else {
+        this.resetInputToDefault();
       }
     }
 
-    this.element.style.textTransform = typeArgument + ";";
-    this.element.setAttribute('data-input-case', typeArgument);
+    this.setupCaseEnforcer();
+
+    return this;
+  },
+  resetInputToDefault : function() {
+    this.element.classList.remove('input-case');
+    this.element.removeEventListener('input', this.updateCase);
+  },
+
+  setupCaseEnforcer: function() {
+    this.element.style.textTransform = this.typeArgument + ";";
+    this.element.setAttribute('data-input-case', this.typeArgument);
     this.element.classList.add('input-case-enforcer');
 
     this.watchForChange(); // Watch for change on this
 
     this.updateCase(true, this.element); // init on page load
-
-    return this;
   },
-
   watchForChange: function() { // Watch for change to handle event listener
     this.element.addEventListener('input', this.updateCase);
   },
