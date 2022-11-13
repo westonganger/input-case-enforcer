@@ -36,6 +36,7 @@ window.inputCaseEnforcer = { // Alternative object version of the inputCaseEnfor
 
     return this;
   },
+
   resetInputToDefault : function() {
     this.element.classList.remove('input-case');
     this.element.removeEventListener('input', this.updateCase);
@@ -50,6 +51,7 @@ window.inputCaseEnforcer = { // Alternative object version of the inputCaseEnfor
 
     this.updateCase(true, this.element); // init on page load
   },
+
   watchForChange: function() { // Watch for change to handle event listener
     this.element.addEventListener('input', this.updateCase);
   },
